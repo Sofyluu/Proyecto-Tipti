@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    /* list-style: none; */
   }
 
 .grid-container{
@@ -40,7 +41,12 @@
 }
 
 .nav__left{
-    margin-left: 75px;
+    margin-left: 60px;
+}
+
+.nav__left > img {
+    width: 266px;
+    height: 19px;
 }
 
 .nav__right{
@@ -75,33 +81,50 @@
     margin-left: 20px;
 }
 
-.nav__right .nav__menu{
+.nav__menu > img{
+    height: 19px;
     margin-left: 30px;
-    margin-right: 20px;
+    margin-right: 30px;
     flex-direction: row;
 }
 
 .main {
-    height: 700px;
-    background-image: url(./img/fondo_1.jpg);
+    height: 850px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(./img/fondo_1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     display: flex;
+    /* z-index: 1; */
+   
 
 }
 
+/* .main2{
+    height: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+     
+} */
+
 .search__container{
     display: flex;
-    position: absolute;
+    /* position: relative; */
     top: 10px;
     left: 1300px;
+    padding: 100px;
 }
 
 .search{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    /* position: absolute; */
     
 }
 
@@ -110,9 +133,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 480px;
-    height: 55px;
-    margin-top: 95px;
+    width: 390px;
+    height: 45px;
+    margin-top: -309px;
     background-color: transparent;
     font-size: 30px;
     color: #fff;
@@ -174,18 +197,79 @@
     font-size: 24px;
 }
 
-.gallery1{
-    position: relative;
+.gallery1__left > ul{
     display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
-.gallery1__left{
-    position: absolute;
-    flex-direction: row;
-    justify-content: flex-start;
+.gallery1__left > ul li {
+    margin: .5em;
+    list-style: none;
 }
+
+.gallery1__left > ul li a{
+    width: 219px;
+    height: 300px;
+    display: inline-flex;
+    align-items: self-end;
+    text-decoration: none;
+    color: white;
+}
+.gallery1__left > ul li a div{
+    width: 800%;
+    height: 25%;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    position: relative;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image1{
+    background: url(./img/gallery1__item1.png) no-repeat;
+    background-size: contain;
+}
+
+.image2{
+    background: url(./img/gallery1__item2.png) no-repeat;
+    background-size: contain;
+}
+
+.image3{
+    background: url(./img/gallery1__item3.png) no-repeat;
+    background-size: contain;
+}
+
+/* .gallery1{
+    display: flex;}
+
+.gallery1__left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    height: 500px;
+    padding: 5px;
+}
+
+.gallery1__left > div{
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 20px;
+}
+
+
 
 .gallery1__right{
     flex-direction: row;
     justify-content: flex-end;
-}
+    left: 300px;
+    width: 50%;
+    height: 500px;
+    padding: 5px;
+} */
